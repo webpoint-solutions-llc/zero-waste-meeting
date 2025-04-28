@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const searchParams = useSearchParams();
   const code = searchParams.get("code");
-  const [loadding, setLoading] = useState(false);
 
   useEffect(() => {
     getAccesstoken();
@@ -37,8 +36,8 @@ export default function Home() {
     <div>
       <p>Code from URL: {code}</p>
       <p>Welcome to Dashboard!</p>
-      <Speedometer/>
-      <FocusHours/>
+      <Speedometer />
+      <FocusHours />
     </div>
   );
 }

@@ -22,7 +22,7 @@ export default function Sidebar() {
       id: "analytics",
       icon: AnalyticsIcon,
       label: "Analytics",
-      href: "/analytics",
+      href: "/dashboard/analytics",
       isFuture: false,
     },
   ];
@@ -31,13 +31,13 @@ export default function Sidebar() {
       id: "calendar",
       icon: CalanderIcon,
       label: "Calendar",
-      href: "/calendar",
+      href: "/dashboard/calendar",
     },
     {
       id: "slack",
       icon: SlackIcon,
       label: "Slack",
-      href: "/slack",
+      href: "/dashboard/slack",
       isFuture: true,
     },
   ];
