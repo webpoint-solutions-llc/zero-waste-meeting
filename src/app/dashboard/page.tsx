@@ -1,3 +1,6 @@
+"use client";
+import { FocusHours } from "@/components/focushours";
+import CookingGauge from "@/components/Speedometer";
 import Human from "@/icons/human";
 
 export default function Dashboard() {
@@ -14,6 +17,11 @@ export default function Dashboard() {
           <Human />
           {TIME}
         </div>
+      </div>
+      <FocusHours />
+      <div className="grid grid-cols-2 gap-4 mt-4">
+        <CookingGauge />
+        <CookingGauge />
       </div>
     </div>
   );

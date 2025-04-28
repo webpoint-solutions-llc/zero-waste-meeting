@@ -92,7 +92,11 @@ export default function CookingGauge() {
   }, []);
 
   // Function to draw the needle
-  const drawNeedle = (ctx: CanvasRenderingContext2D, value: number, chart: Chart) => {
+  const drawNeedle = (
+    ctx: CanvasRenderingContext2D,
+    value: number,
+    chart: Chart
+  ) => {
     const { width, height } = chart.canvas;
     const centerX = width / 2;
     const centerY = height - 10;
@@ -114,7 +118,10 @@ export default function CookingGauge() {
     // Draw the needle
     ctx.beginPath();
     ctx.moveTo(centerX, centerY);
-    ctx.lineTo(centerX + Math.cos(angle) * needleLength, centerY + Math.sin(angle) * needleLength);
+    ctx.lineTo(
+      centerX + Math.cos(angle) * needleLength,
+      centerY + Math.sin(angle) * needleLength
+    );
     ctx.lineWidth = 4;
     ctx.strokeStyle = needleColor;
     ctx.stroke();
@@ -179,14 +186,19 @@ export default function CookingGauge() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+    <div className="flex flex-col items-center justify-center">
       <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-xl font-bold text-center mb-6">How cooked are you today? 🔥</h2>
+        <h2 className="text-xl font-bold text-center mb-6">
+          How cooked are you today? 🔥
+        </h2>
         <div className="relative">
           <canvas ref={chartRef} height="300"></canvas>
         </div>
         <div className="mt-6 p-4 bg-blue-50 text-blue-800 rounded-md text-sm">
-          <p>Tip: Be sure to take a break after a long meeting to cooldown. We know its hard out there.</p>
+          <p>
+            Tip: Be sure to take a break after a long meeting to cooldown. We
+            know its hard out there.
+          </p>
         </div>
       </div>
     </div>
