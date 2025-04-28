@@ -10,8 +10,10 @@ interface DashboardLayoutProps {
 function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <>
-      <Sidebar />
-      {children}
+      <main className="flex">
+        <Sidebar />
+        {children}
+      </main>
     </>
   );
 }
