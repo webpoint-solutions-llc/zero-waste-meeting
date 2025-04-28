@@ -1,18 +1,14 @@
-
-"use client"
+"use client";
 import Header from "@/components/header";
-import axios from "axios";
+
 import Image from "next/image";
 
 export default function LoginPage() {
-
-
   const login = async () => {
     //window href
     window.open("http://localhost:3003/api/v1/auth/google/login", "_self");
-    //window href 
-  
-  }
+    //window href
+  };
   return (
     <div>
       <Header />
@@ -239,7 +235,10 @@ export default function LoginPage() {
           Power your accountability and boost productivity with
           <strong> Focus.</strong>
         </span>
-        <button onClick={()=> login()} className="bg-[#293DCC] flex gap-2 px-6 py-2 rounded-[8px] text-white justify-center items-center curso">
+        <button
+          onClick={() => login()}
+          className="bg-[#293DCC] flex gap-2 px-6 py-2 rounded-[8px] text-white justify-center items-center curso"
+        >
           Sign up{" "}
           <svg
             width="12"
