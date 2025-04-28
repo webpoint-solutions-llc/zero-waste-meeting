@@ -1,5 +1,7 @@
 "use client";
 
+import { FocusHours } from "@/components/focushours";
+import Speedometer from "@/components/Speedometer";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -35,6 +37,8 @@ export default function Home() {
     <div>
       <p>Code from URL: {code}</p>
       <p>Welcome to Dashboard!</p>
+      <Speedometer/>
+      <FocusHours/>
     </div>
   );
 }
