@@ -1,9 +1,10 @@
+import Header from "@/components/header";
 import Image from "next/image";
 
 export default function LoginPage() {
   return (
     <div>
-      <div>Focus</div>
+      <Header />
       <div className=" flex flex-col items-center gap-12 text-center">
         <h1 className="text-5xl font-extrabold">
           Don&apos;t know where <br /> your work time is going?
@@ -244,7 +245,7 @@ export default function LoginPage() {
         </button>
       </div>
 
-      <div className=" flex flex-col items-center gap-12 text-center pt-2.5">
+      <div className=" flex flex-col items-center gap-12 text-center pt-[134px]">
         <h1 className="text-5xl font-extrabold">
           Don&apos;t know where your <br /> work time is going?
         </h1>

@@ -1,3 +1,9 @@
+import AuthGuard from "@/components/authGaurd";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <AuthGuard>
+      <div>Welcome to Dashboard!</div>
+    </AuthGuard>
+  );
 }
