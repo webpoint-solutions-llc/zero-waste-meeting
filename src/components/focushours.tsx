@@ -148,7 +148,7 @@ export const FocusHours = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto bg-white rounded-lg border border-gray-200 p-6">
+    <div className="w-full mx-auto bg-white rounded-lg border border-gray-200 p-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-lg font-semibold">Focus hours 😎</h2>
       </div>
