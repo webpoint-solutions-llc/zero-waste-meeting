@@ -1,4 +1,5 @@
 "use client";
+import WellnessCard from "@/components/daily-digest";
 import { FocusHours } from "@/components/focushours";
 import CookingGauge from "@/components/Speedometer";
 import Human from "@/icons/human";
@@ -9,6 +10,9 @@ import { useEffect, useState } from "react";
 export default function Dashboard() {
   const searchParams = useSearchParams();
   const code = searchParams.get("code");
+  const [username, setUsername] = useState("");
+
+  const saveusername = localStorage.getItem("username");
 
   const [loading, setLoading] = useState(false);
 
@@ -27,6 +31,9 @@ export default function Dashboard() {
       const refreshToken = response.data.data.refresh_token;
       localStorage.setItem("accessToken", accesstoken);
       localStorage.setItem("refreshToken", refreshToken);
+      const username = response.data.data.user;
+      localStorage.setItem("username", username);
+      setUsername(username);
     } catch (error) {
       console.error("Error fetching access token:", error);
     } finally {
@@ -44,15 +51,19 @@ export default function Dashboard() {
   });
 
   return (
-    <div>
+    <div className=" container">
       <div>
-        <h1 className="text-5xl font-extrabold">Hey, {FULL_NAME}</h1>
+        <h1 className="text-5xl font-extrabold">
+          Hey, {username || saveusername}
+        </h1>
         <div className="flex gap-1 my-3"> 🕧{TIME}</div>
       </div>
-      <FocusHours />
+      <div>
+        <FocusHours />
+      </div>
       <div className="grid grid-cols-2 gap-4 mt-4">
         <CookingGauge />
-        <CookingGauge />
+        <WellnessCard />
       </div>
     </div>
   );

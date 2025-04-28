@@ -33,7 +33,7 @@ interface MeetingProps {
 }
 
 export default function MeetingCard({ meeting }: { meeting: MeetingProps }) {
-  const [isExpanded, setIsExpanded] = useState(meeting.isExpanded)
+  const [isExpanded, setIsExpanded] = useState(true)
 
   const borderColor =
     meeting.id === 1
@@ -57,7 +57,7 @@ export default function MeetingCard({ meeting }: { meeting: MeetingProps }) {
         <button className="text-gray-500">{isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}</button>
       </div>
 
-      {isExpanded &&
+      {isExpanded === true &&
         meeting.duration &&
         meeting.teamHour &&
         meeting.totalGuests &&
