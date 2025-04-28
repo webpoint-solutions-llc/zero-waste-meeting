@@ -101,12 +101,13 @@ export default function Sidebar() {
           {menuItems2.map((item) => (
             <li key={item.id}>
               <button
-                onClick={() => handleNavigation(item.href, item.id)}
-                className={`flex items-center w-full p-3 rounded-lg transition-colors ${
-                  activeItem === item.id ? "bg-[#F5F5F5]" : "hover:outline"
-                }
-                ${!!item.isFuture ? " pointer-events-none" : ""}
-                `}
+                // onClick={() => handleNavigation(item.href, item.id)}
+                className="flex items-center w-full p-3 rounded-lg transition-colors1"
+                //  ${
+                //     activeItem === item.id ? "bg-[#F5F5F5]" : "hover:outline"
+                //   }
+                // ${!!item.isFuture ? " pointer-events-none" : ""}
+                // `}
               >
                 <span
                   className={`flex ${
