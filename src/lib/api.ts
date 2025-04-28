@@ -3,7 +3,7 @@ import { QueryClient } from "@tanstack/react-query";
 
 // Create axios instance with default config
 export const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || "https://api.example.com",
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "http://10.10.1.54:3003/api/v1",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
