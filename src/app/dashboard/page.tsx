@@ -34,19 +34,20 @@ export default function Dashboard() {
     }
   };
 
-  const FULL_NAME = "Fucus";
-  const TIME = new Date().toLocaleTimeString([], {
+  const FULL_NAME = "Bimala Rai";
+  const TIME = new Date().toLocaleString("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
+    hour12: true, // Use 12-hour format with AM/PM
+    day: "2-digit",
+    month: "short",
   });
+
   return (
     <div>
       <div>
-        Hey, {FULL_NAME}
-        <div className="flex gap-1">
-          <Human />
-          {TIME}
-        </div>
+        <h1 className="text-5xl font-extrabold">Hey, {FULL_NAME}</h1>
+        <div className="flex gap-1 my-3"> 🕧{TIME}</div>
       </div>
       <FocusHours />
       <div className="grid grid-cols-2 gap-4 mt-4">
